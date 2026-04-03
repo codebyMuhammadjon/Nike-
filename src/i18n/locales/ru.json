@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "home": "Главная",
+    "men": "Мужчины",
+    "women": "Женщины",
+    "kids": "Дети",
+    "sale": "Распродажа",
+    "snkrs": "SNKRS"
+  },
+  "header": {
+    "search": "Поиск",
+    "cart": "Корзина",
+    "signIn": "Войти",
+    "admin": "Админ"
+  },
+  "home": {
+    "newAndFeatured": "Новое и избранное",
+    "bestOfAirMax": "Лучшее из Air Max",
+    "gearUp": "Снаряжение",
+    "theEssentials": "Необходимое",
+    "addToCart": "Добавить в корзину",
+    "shop": "Магазин",
+    "viewMore": "Просмотреть еще"
+  },
+  "product": {
+    "price": "Цена",
+    "category": "Категория",
+    "size": "Размер",
+    "color": "Цвет",
+    "quantity": "Количество",
+    "addToCart": "Добавить в корзину",
+    "description": "Описание"
+  },
+  "cart": {
+    "cart": "Корзина",
+    "item": "Товар",
+    "items": "Товары",
+    "total": "Итого",
+    "checkout": "Оформить заказ",
+    "empty": "Корзина пуста",
+    "remove": "Удалить",
+    "continue": "Продолжить"
+  },
+  "checkout": {
+    "shipping": "Доставка",
+    "shippingAddress": "Адрес доставки",
+    "firstName": "Имя",
+    "lastName": "Фамилия",
+    "email": "Email",
+    "phone": "Телефон",
+    "address": "Адрес",
+    "city": "Город",
+    "zipCode": "Почтовый индекс",
+    "placeOrder": "Разместить заказ",
+    "orderPlaced": "Заказ размещен"
+  },
+  "admin": {
+    "login": "Вход",
+    "username": "Имя пользователя",
+    "password": "Пароль",
+    "products": "Товары",
+    "orders": "Заказы",
+    "addProduct": "Добавить товар",
+    "editProduct": "Редактировать товар",
+    "deleteProduct": "Удалить товар",
+    "logout": "Выход"
+  },
+  "common": {
+    "loading": "Загрузка...",
+    "error": "Произошла ошибка",
+    "success": "Успешно",
+    "cancel": "Отмена",
+    "save": "Сохранить",
+    "delete": "Удалить",
+    "edit": "Редактировать"
+  }
+}

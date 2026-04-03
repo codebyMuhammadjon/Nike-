@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "home": "Home",
+    "men": "Men",
+    "women": "Women",
+    "kids": "Kids",
+    "sale": "Sale",
+    "snkrs": "SNKRS"
+  },
+  "header": {
+    "search": "Search",
+    "cart": "Cart",
+    "signIn": "Sign In",
+    "admin": "Admin"
+  },
+  "home": {
+    "newAndFeatured": "New & Featured",
+    "bestOfAirMax": "Best of Air Max",
+    "gearUp": "Gear Up",
+    "theEssentials": "The Essentials",
+    "addToCart": "Add to Cart",
+    "shop": "Shop",
+    "viewMore": "View More"
+  },
+  "product": {
+    "price": "Price",
+    "category": "Category",
+    "size": "Size",
+    "color": "Color",
+    "quantity": "Quantity",
+    "addToCart": "Add to Cart",
+    "description": "Description"
+  },
+  "cart": {
+    "cart": "Cart",
+    "item": "Item",
+    "items": "Items",
+    "total": "Total",
+    "checkout": "Checkout",
+    "empty": "Cart Empty",
+    "remove": "Remove",
+    "continue": "Continue Shopping"
+  },
+  "checkout": {
+    "shipping": "Shipping",
+    "shippingAddress": "Shipping Address",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email",
+    "phone": "Phone",
+    "address": "Address",
+    "city": "City",
+    "zipCode": "Zip Code",
+    "placeOrder": "Place Order",
+    "orderPlaced": "Order Placed"
+  },
+  "admin": {
+    "login": "Login",
+    "username": "Username",
+    "password": "Password",
+    "products": "Products",
+    "orders": "Orders",
+    "addProduct": "Add Product",
+    "editProduct": "Edit Product",
+    "deleteProduct": "Delete Product",
+    "logout": "Logout"
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit"
+  }
+}

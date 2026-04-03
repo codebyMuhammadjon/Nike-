@@ -1,0 +1,77 @@
+{
+  "nav": {
+    "home": "Bosh sahifa",
+    "men": "Erkaklar",
+    "women": "Ayollar",
+    "kids": "Bolalar",
+    "sale": "Chegirma",
+    "snkrs": "SNKRS"
+  },
+  "header": {
+    "search": "Qidirish",
+    "cart": "Savat",
+    "signIn": "Kirish",
+    "admin": "Admin raqobat"
+  },
+  "home": {
+    "newAndFeatured": "Yangi va tanlangan",
+    "bestOfAirMax": "Air Max-ning eng yaxshilari",
+    "gearUp": "Jihozni tayyorlash",
+    "theEssentials": "Asosiy narsa",
+    "addToCart": "Savatchaga qo'shish",
+    "shop": "Do'kon",
+    "viewMore": "Yana ko'rish"
+  },
+  "product": {
+    "price": "Narxi",
+    "category": "Kategoriya",
+    "size": "O'lcham",
+    "color": "Rang",
+    "quantity": "Miqdori",
+    "addToCart": "Savatchaga qo'shish",
+    "description": "Tavsif"
+  },
+  "cart": {
+    "cart": "Savat",
+    "item": "Mahsulot",
+    "items": "Mahsulotlar",
+    "total": "Jami",
+    "checkout": "Buyurtmani rasmiylashtirish",
+    "empty": "Savat bo'sh",
+    "remove": "O'chirish",
+    "continue": "Turishni davom ettirish"
+  },
+  "checkout": {
+    "shipping": "Jo'natish",
+    "shippingAddress": "Jo'natish manzili",
+    "firstName": "Ism",
+    "lastName": "Familiya",
+    "email": "Email",
+    "phone": "Telefon",
+    "address": "Manzil",
+    "city": "Shahar",
+    "zipCode": "Pochta kodi",
+    "placeOrder": "Buyurtmani rasmiylashtirish",
+    "orderPlaced": "Buyurtma joylashtirildi"
+  },
+  "admin": {
+    "login": "Kirish",
+    "username": "Foydalanuvchi nomi",
+    "password": "Parol",
+    "products": "Mahsulotlar",
+    "orders": "Buyurtmalar",
+    "addProduct": "Mahsulot qo'shish",
+    "editProduct": "Mahsulotni tahrirlash",
+    "deleteProduct": "Mahsulotni o'chirish",
+    "logout": "Chiqish"
+  },
+  "common": {
+    "loading": "Yuklanmoqda...",
+    "error": "Xatolik yuz berdi",
+    "success": "Muvaffaqiyatli",
+    "cancel": "Bekor qilish",
+    "save": "Saqlash",
+    "delete": "O'chirish",
+    "edit": "Tahrirlash"
+  }
+}
