@@ -6,8 +6,18 @@ export const useProducts = (params = {}) => {
   return useQuery({
     queryKey: ["products", params],
     queryFn: async () => {
-      const response = await apiClient.get("/products", { params });
-      return response.data;
+      try {
+        const response = await apiClient.get("/products", { params });
+        console.log("Products fetched:", response.data);
+        return response.data;
+      } catch (error) {
+        console.error(
+          "Error fetching products:",
+          error.message,
+          error.response?.data,
+        );
+        throw error;
+      }
     },
   });
 };
@@ -41,8 +51,19 @@ export const useSearchProducts = (query) => {
 export const useAdminLogin = () => {
   return useMutation({
     mutationFn: async (credentials) => {
-      const response = await apiClient.post("/auth/admin-login", credentials);
-      return response.data;
+      try {
+        console.log("Attempting admin login with:", credentials);
+        const response = await apiClient.post("/auth/login", credentials);
+        console.log("Admin login successful:", response.data);
+        return response.data;
+      } catch (error) {
+        console.error(
+          "Admin login failed:",
+          error.message,
+          error.response?.data,
+        );
+        throw error;
+      }
     },
   });
 };

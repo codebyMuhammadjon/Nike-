@@ -16,14 +16,27 @@ import OrderSuccess from "./pages/User/OrderSuccess";
 
 // Admin Pages
 import AdminLogin from "./pages/Admin/AdminLogin";
+import AdminDashboard from "./pages/Admin/AdminDashboard";
 import AdminProducts from "./pages/Admin/AdminProducts";
+import AdminOrders from "./pages/Admin/AdminOrders";
 
 function App() {
   const dispatch = useDispatch();
   const token = useSelector((state) => state.auth.token);
   const isDarkMode = useSelector((state) => state.theme.isDarkMode);
 
-  // Initialize and sync dark mode
+  // Initialize dark mode on mount and sync with Redux state
+  useEffect(() => {
+    // Apply dark mode on initial load
+    const savedDarkMode = localStorage.getItem("isDarkMode") === "true";
+    if (savedDarkMode) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, []);
+
+  // Sync dark mode when Redux state changes
   useEffect(() => {
     if (isDarkMode) {
       document.documentElement.classList.add("dark");
@@ -60,7 +73,9 @@ function App() {
           </ProtectedAdminRoute>
         }
       >
+        <Route path="/admin" element={<AdminDashboard />} />
         <Route path="/admin/products" element={<AdminProducts />} />
+        <Route path="/admin/orders" element={<AdminOrders />} />
       </Route>
 
       {/* Catch all */}

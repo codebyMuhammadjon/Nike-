@@ -2,7 +2,7 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useTranslation } from "react-i18next";
-import { Package, ShoppingBag, LogOut } from "lucide-react";
+import { LayoutDashboard, Package, ShoppingBag, LogOut } from "lucide-react";
 import { logout } from "../store/slices/authSlice";
 
 function AdminSidebar() {
@@ -27,6 +27,18 @@ function AdminSidebar() {
 
       {/* Navigation */}
       <nav className="flex-grow p-6 space-y-4">
+        <Link
+          to="/admin"
+          className={`flex items-center gap-3 px-4 py-3 rounded-lg transition ${
+            location.pathname === "/admin"
+              ? "bg-black text-white dark:bg-white dark:text-black"
+              : "text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800"
+          }`}
+        >
+          <LayoutDashboard size={20} />
+          <span className="font-medium">Dashboard</span>
+        </Link>
+
         <Link
           to="/admin/products"
           className={`flex items-center gap-3 px-4 py-3 rounded-lg transition ${

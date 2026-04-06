@@ -10,17 +10,11 @@ const themeSlice = createSlice({
   reducers: {
     toggleDarkMode: (state) => {
       state.isDarkMode = !state.isDarkMode;
-      localStorage.setItem("isDarkMode", state.isDarkMode);
-      document.documentElement.classList.toggle("dark");
+      localStorage.setItem("isDarkMode", String(state.isDarkMode));
     },
     setDarkMode: (state, action) => {
       state.isDarkMode = action.payload;
-      localStorage.setItem("isDarkMode", action.payload);
-      if (action.payload) {
-        document.documentElement.classList.add("dark");
-      } else {
-        document.documentElement.classList.remove("dark");
-      }
+      localStorage.setItem("isDarkMode", String(action.payload));
     },
   },
 });

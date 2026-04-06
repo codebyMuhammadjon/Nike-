@@ -8,6 +8,7 @@ import { addToCart } from "../store/slices/cartSlice";
 function ProductCard({ product, onAddToCart }) {
   const { t } = useTranslation();
   const dispatch = useDispatch();
+  const [imageError, setImageError] = React.useState(false);
 
   const handleAddToCart = (e) => {
     e.preventDefault();
@@ -28,11 +29,25 @@ function ProductCard({ product, onAddToCart }) {
       <div className="bg-white dark:bg-gray-800 rounded-lg overflow-hidden hover:shadow-lg transition group">
         {/* Image Container */}
         <div className="relative overflow-hidden bg-gray-100 dark:bg-gray-700 h-64 md:h-72">
-          <img
-            src={product.image}
-            alt={product.name}
-            className="w-full h-full object-cover group-hover:scale-110 transition duration-300"
-          />
+          {imageError || !product.image ? (
+            <div className="w-full h-full flex items-center justify-center bg-gray-200 dark:bg-gray-600">
+              <div className="text-center">
+                <div className="text-gray-400 dark:text-gray-500 text-4xl mb-2">
+                  📷
+                </div>
+                <p className="text-gray-600 dark:text-gray-400 text-sm">
+                  No image
+                </p>
+              </div>
+            </div>
+          ) : (
+            <img
+              src={product.image}
+              alt={product.name}
+              onError={() => setImageError(true)}
+              className="w-full h-full object-cover group-hover:scale-110 transition duration-300"
+            />
+          )}
           <button className="absolute top-4 right-4 bg-white dark:bg-gray-800 p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition">
             <Heart size={20} className="text-gray-800 dark:text-gray-200" />
           </button>

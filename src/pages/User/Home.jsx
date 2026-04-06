@@ -120,9 +120,9 @@ function Home() {
           ) : products.length > 0 ? (
             products
               .slice(0, 4)
-              .map((product) => (
+              .map((product, index) => (
                 <ProductCard
-                  key={product.id}
+                  key={`${product.id}-${index}`}
                   product={product}
                   onAddToCart={handleAddToCart}
                 />
@@ -301,9 +301,9 @@ function Home() {
           {isLoading ? (
             <SkeletonLoader count={8} />
           ) : products.length > 0 ? (
-            products.map((product) => (
+            products.map((product, index) => (
               <ProductCard
-                key={product.id}
+                key={`${product.id}-${index}`}
                 product={product}
                 onAddToCart={handleAddToCart}
               />

@@ -15,6 +15,7 @@ function ProductDetail() {
   const [selectedSize, setSelectedSize] = useState("");
   const [selectedColor, setSelectedColor] = useState("");
   const [toast, setToast] = useState(null);
+  const [imageError, setImageError] = useState(false);
 
   const { data: product, isLoading, error } = useProductById(id);
 
@@ -97,24 +98,41 @@ function ProductDetail() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Image Section */}
           <div className="flex flex-col gap-4">
-            <div className="bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden h-96 md:h-full">
-              <img
-                src={product?.image}
-                alt={product?.name}
-                className="w-full h-full object-cover"
-              />
+            <div className="bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden h-96 md:h-full flex items-center justify-center">
+              {imageError || !product?.image ? (
+                <div className="text-center">
+                  <div className="text-gray-400 dark:text-gray-500 text-6xl mb-2">
+                    📷
+                  </div>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    No image available
+                  </p>
+                </div>
+              ) : (
+                <img
+                  src={product?.image}
+                  alt={product?.name}
+                  onError={() => setImageError(true)}
+                  className="w-full h-full object-cover"
+                />
+              )}
             </div>
             <div className="flex gap-3">
               {[1, 2, 3].map((idx) => (
                 <div
                   key={idx}
-                  className="w-20 h-20 bg-gray-100 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 cursor-pointer hover:border-black dark:hover:border-white"
+                  className="w-20 h-20 bg-gray-100 dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 cursor-pointer hover:border-black dark:hover:border-white flex items-center justify-center"
                 >
-                  <img
-                    src={product?.image}
-                    alt={`view-${idx}`}
-                    className="w-full h-full object-cover"
-                  />
+                  {imageError || !product?.image ? (
+                    <div className="text-gray-400 dark:text-gray-500">📷</div>
+                  ) : (
+                    <img
+                      src={product?.image}
+                      alt={`view-${idx}`}
+                      onError={() => setImageError(true)}
+                      className="w-full h-full object-cover"
+                    />
+                  )}
                 </div>
               ))}
             </div>
